@@ -9,8 +9,8 @@ public class ANextRound {
             arr[i]=sc.nextInt();
         }
         int ans=0;
-        for(int i=0;i<=k;i++){
-            if(arr[i]>k){
+        for(int i=0;i<n;i++){
+            if(arr[i]>=arr[k-1] && arr[i]>0){
                 ans++;
             }
         }
