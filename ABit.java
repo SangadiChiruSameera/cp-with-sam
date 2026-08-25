@@ -3,20 +3,16 @@ public class ABit{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int k=n;
-        n=0;
-        while(k-->0){
-            String op=sc.next();
-            if(op.equals("++X")){
-                --n;
-            }else if(op.equals("X++")){
-                n++;
-            }else if(op.equals("--X")){
-                --n;
+        int k=0;
+        while(n-->0){
+            String str=sc.next();
+            //System.out.println(str+" "+str.contains("++"));
+            if(str.contains("++")){
+                k++;
             }else{
-                n--;
+                k--;
             }
         }
-        System.out.println(n);
+        System.out.println(k);
     }
 }
