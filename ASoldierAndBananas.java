@@ -9,6 +9,6 @@ public static void main(String args[]){
     for(int i=1;i<=w;i++){
         cost+=i*k;
     }
-    System.out.println(cost-n);
+    System.out.println(Math.max(0,cost-n));
 }
 }
