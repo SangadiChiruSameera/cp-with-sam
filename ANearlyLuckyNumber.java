@@ -2,14 +2,15 @@ import java.util.*;
 public class ANearlyLuckyNumber{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        long num=sc.nextLong();
+        String num=sc.next();
         int count=0;
-        while(num>0){
-            int lastDigit=(int)num%10;
+        int i=0;
+        while(i<num.length()){
+            int lastDigit=num.charAt(i)-'0';
             if(lastDigit==4 || lastDigit==7){
                 count++;
             }
-            num/=10;
+            i++;
         }
         if(count==4 || count==7){
             System.out.println("YES");
