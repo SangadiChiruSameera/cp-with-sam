@@ -10,5 +10,6 @@ public class BDrinks{
         }
         double ans=sum/(double)n;
         System.out.printf("%.12f",ans);
+        System.out.printf("%.12f%n",ans);
     }
 }
