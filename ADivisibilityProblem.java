@@ -7,9 +7,8 @@ public class ADivisibilityProblem{
             int a=sc.nextInt();
             int b=sc.nextInt();
             int count=0;
-            while(a%b!=0){
-                a++;
-                count++;
+            if(a%b!=0){
+                count=b-a%b;
             }
             System.out.println(count);
         }
