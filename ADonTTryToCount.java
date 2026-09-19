@@ -8,26 +8,15 @@ public class ADonTTryToCount{
             int m=sc.nextInt();
             String str1=sc.next();
             String str2=sc.next();
-            if(str1.contains(str2)){
-                System.out.println("0");
-                continue ;
-            }
-            int count=0;
-            StringBuilder sb=new StringBuilder(str1);
-            while(!sb.toString().contains(str2)){
-                sb.append(sb);
-                count++;
-                if(sb.toString().contains(str2)){
-                    System.out.println(count);
+            int ans=-1;
+            for(int op=0;op<=5;op++){
+                if(str1.contains(str2)){
+                    ans=op;
                     break;
                 }
-                if(count>str2.length()) break;
-                //System.out.println("--"+count);
+                str1+=str1;
             }
-            if(!sb.toString().contains(str2)){
-                System.out.println("-1");
-                continue ;
-            }
+            System.out.println(ans);
         }
     }
 }
