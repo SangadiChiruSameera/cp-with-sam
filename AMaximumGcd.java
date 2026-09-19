@@ -9,3 +9,4 @@ public class AMaximumGcd{
         }
     }
 }
+//the greatest gcd of n numbers is n/2
