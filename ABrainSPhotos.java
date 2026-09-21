@@ -13,7 +13,7 @@ public class ABrainSPhotos{
         int count=0;
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                if(grid[i][j]=='B' || grid[i][j]=='W'){
+                if(grid[i][j]=='B' || grid[i][j]=='W' || grid[i][j]=='G'){
                     count++;
                 }
             }
