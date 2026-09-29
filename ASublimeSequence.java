@@ -1,0 +1,16 @@
+import java.util.*;
+public class ASublimeSequence{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int k=sc.nextInt();
+        while(k-->0){
+            int x=sc.nextInt();
+            int n=sc.nextInt();
+            if(n%2==0){
+                System.out.println("0");
+            }else{
+                System.out.println(x);
+            }
+        }
+    }
+}
