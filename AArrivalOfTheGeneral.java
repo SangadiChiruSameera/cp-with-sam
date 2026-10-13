@@ -1,22 +1,37 @@
+
 import java.util.*;
-public class AArrivalOfTheGeneral{
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
-        }
-        int minIdx=0;
-        int maxIdx=0;
-        for(int i=1;i<n;i++){
-            if(arr[i]<=arr[minIdx]){
-                minIdx=i;
-            }else if(arr[i]>=arr[maxIdx]){
-                maxIdx=i;
+
+public class AArrivalOfTheGeneral {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        int max = -1, min = 101;
+        int maxIndex = -1, minIndex = -1;
+
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+
+            if (a[i] > max) {
+                max = a[i];
+                maxIndex = i;
+            }
+
+            if (a[i] <= min) {
+                min = a[i];
+                minIndex = i;
             }
         }
-        //System.out.println(minIdx+" "+maxIdx);
-        System.out.println((n-minIdx-1)+(maxIdx-1));
+
+        int ans = maxIndex + (n - 1 - minIndex);
+
+        if (maxIndex > minIndex) {
+            ans--;
+        }
+
+        System.out.println(ans);
+        sc.close();
     }
 }
