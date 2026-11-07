@@ -34,6 +34,7 @@
 //         }
 //     }
 // }
+//using itarator class !!
 import java.util.*;
 public class ADoremySPaint3{
     public static void main(String args[]){
